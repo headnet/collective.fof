@@ -114,8 +114,7 @@ class CreateFourOhFourPage(BrowserView):
         if language != default_language:
             folder = folder.restrictedTraverse(language)
 
-        if not hasattr(folder, 'fourohfour'):
-            folder = folder.aq_base
+        if not hasattr(folder.aq_base, 'fourohfour'):
 
             item = createContentInContainer(
                 folder, 'Document', checkConstraints=True,
