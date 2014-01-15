@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+    <metal:content-core fill-slot="content-core">
+      <table class="listing">
+        <thead>
+          <th>Language</th>
+          <th>URL</th>
+          <th></th>
+        </thead>
+        <tbody>
+            <tal:block repeat="language view/languages">
+              <tr>
+                <td>
+                  <img tal:attributes="src language/flag;
+                                       alt language/native"/>
+                  <span tal:omit-tag=""
+                        tal:content="string: ${language/name} (${language/native})"
+                        />
+                </td>
+                <td>
+                  <a tal:attributes="href language/url"
+                     tal:content="language/url"
+                     />
+                </td>
+                <td>
+                  <a tal:attributes="href string:${here/portal_url}/fof-create?language=${language/id}"
+                     tal:condition="language/parent_exists">
+                    <span tal:omit-tag="" tal:condition="language/exists">Edit</span>
+                    <span tal:omit-tag="" tal:condition="not:language/exists">Create</span>
+                  </a>
+                  <span tal:omit-tag="" tal:condition="not:language/parent_exists">
+                    -
+                  </span>
+              </tr>
+            </tal:block>
+          </tbody>
+      </table>
+    </metal:content-core>
+</body>
+</html>

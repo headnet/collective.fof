@@ -1,0 +1,57 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.fof">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <includeDependencies package="." />
+
+  <cmf:registerDirectory
+      name="skins"
+      directory="skins"
+      recursive="True"
+      />
+
+  <interface interface=".interfaces.IFourOhFourPage"/>
+
+  <browser:page
+      name="fof"
+      class=".browser.FourOhFourView"
+      permission="zope2.View"
+      for="*"
+      layer=".interfaces.IBrowserLayer"
+      allowed_attributes="render"
+      />
+
+  <browser:page
+      name="fof-control-panel"
+      class=".browser.ControlPanel"
+      template="controlpanel.pt"
+      permission="zope2.View"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      layer=".interfaces.IBrowserLayer"
+      />
+
+  <browser:page
+      name="fof-create"
+      class=".browser.CreateFourOhFourPage"
+      permission="zope2.View"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      layer=".interfaces.IBrowserLayer"
+      />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.fof profile"
+      directory="profile"
+      description="Installs the collective.fof package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+
+</configure>
