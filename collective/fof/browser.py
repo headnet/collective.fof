@@ -58,7 +58,7 @@ class ControlPanel(BrowserView):
             except KeyError:
                 return False
 
-        return hasattr(folder, 'fourohfour')
+        return hasattr(folder.aq_base, 'fourohfour')
 
     def language_folder_exists(self, language):
         context = self.context
@@ -115,9 +115,10 @@ class CreateFourOhFourPage(BrowserView):
             folder = folder.restrictedTraverse(language)
 
         if not hasattr(folder, 'fourohfour'):
-            item = createContentInContainer(folder, 'Document',
-                                     checkConstraints=True,
-                                     title='404 page')
+            item = createContentInContainer(
+                folder, 'Document', checkConstraints=True,
+                title='404 page'
+            )
 
             # Since the document type provides the INameFromTitle
             # behavior, we cannot override it, so we need to
