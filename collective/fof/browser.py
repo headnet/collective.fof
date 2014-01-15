@@ -115,6 +115,8 @@ class CreateFourOhFourPage(BrowserView):
             folder = folder.restrictedTraverse(language)
 
         if not hasattr(folder, 'fourohfour'):
+            folder = folder.aq_base
+
             item = createContentInContainer(
                 folder, 'Document', checkConstraints=True,
                 title='404 page'
