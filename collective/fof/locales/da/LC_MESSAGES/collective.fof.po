@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.fof 1.0-dev\n"
-"POT-Creation-Date: 2014-01-16 08:16+0000\n"
+"POT-Creation-Date: 2014-01-16 08:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Bo Simonsen <bo@headnet.dk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 #: collective.fof/collective/fof/profile/controlpanel.xml
 msgid "404 pages"
-msgstr "Fejlsider"
+msgstr "404 Fejlsider"
 
 #: collective.fof/collective/fof/controlpanel.pt:40
 msgid "Create"
@@ -28,7 +28,7 @@ msgstr "Rediger"
 
 #: collective.fof/collective/fof/controlpanel.pt:11
 msgid "Edit 404 pages"
-msgstr "Ret fejlside"
+msgstr "Ret 404 fejlside"
 
 #: collective.fof/collective/fof/controlpanel.pt:17
 msgid "Language"
