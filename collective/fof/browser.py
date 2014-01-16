@@ -7,7 +7,7 @@ from Products.Five.utilities.marker import mark
 from plone.dexterity.utils import createContentInContainer
 
 from .interfaces import IFourOhFourPage
-
+from .i18n import MessageFactory as _
 
 class FourOhFourView(BrowserView):
 

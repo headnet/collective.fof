@@ -1,0 +1,44 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.fof 1.0-dev\n"
+"POT-Creation-Date: 2014-01-16 08:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: Bo Simonsen <bo@headnet.dk>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: da\n"
+"Language-Name: Danish\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.fof\n"
+
+#: collective.fof/collective/fof/profile/controlpanel.xml
+msgid "404 pages"
+msgstr "Fejlsider"
+
+#: collective.fof/collective/fof/controlpanel.pt:40
+msgid "Create"
+msgstr "Opret"
+
+#: collective.fof/collective/fof/controlpanel.pt:39
+msgid "Edit"
+msgstr "Rediger"
+
+#: collective.fof/collective/fof/controlpanel.pt:11
+msgid "Edit 404 pages"
+msgstr "Ret fejlside"
+
+#: collective.fof/collective/fof/controlpanel.pt:17
+msgid "Language"
+msgstr "Sprog"
+
+#: collective.fof/collective/fof/controlpanel.pt:12
+msgid "On this page you can edit each 404 page for each language."
+msgstr "På denne side kan du rette fejlsider for forskellige sprog."
+
+#: collective.fof/collective/fof/controlpanel.pt:18
+msgid "URL"
+msgstr "URL"
+

@@ -4,14 +4,18 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       metal:use-macro="context/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="collective.fof">
 
 <body>
-    <metal:content-core fill-slot="content-core">
+    <metal:content-core fill-slot="content">
+      <h1 class="documentFirstHeading" i18n:translate="">Edit 404 pages</h1>
+      <div class="documentDescription" i18n:translate="">
+        On this page you can edit each 404 page for each language.
+      </div>
       <table class="listing">
         <thead>
-          <th>Language</th>
-          <th>URL</th>
+          <th i18n:translate="">Language</th>
+          <th i18n:translate="">URL</th>
           <th></th>
         </thead>
         <tbody>
@@ -32,8 +36,8 @@
                 <td>
                   <a tal:attributes="href string:${here/portal_url}/fof-create?language=${language/id}"
                      tal:condition="language/parent_exists">
-                    <span tal:omit-tag="" tal:condition="language/exists">Edit</span>
-                    <span tal:omit-tag="" tal:condition="not:language/exists">Create</span>
+                    <span tal:omit-tag="" tal:condition="language/exists" i18n:translate="">Edit</span>
+                    <span tal:omit-tag="" tal:condition="not:language/exists" i18n:translate="">Create</span>
                   </a>
                   <span tal:omit-tag="" tal:condition="not:language/parent_exists">
                     -
