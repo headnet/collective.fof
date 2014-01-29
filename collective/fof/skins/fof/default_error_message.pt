@@ -1,11 +1,3 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      lang="en"
-      i18n:domain="plone">
-
-<body>
 <metal:main
      tal:define="err_type options/error_type|nothing;
                  err_message options/error_message|nothing;
@@ -91,5 +83,3 @@
                             dummy python: kss_view and kss_view.attach_error(err_type, err_value);"/>
 
 </metal:main>
-</body>
-</html>
